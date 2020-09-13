@@ -21,7 +21,7 @@ public class PlayerListener implements Listener {
 			
 	        if (event.getClickedBlock().getType() == Material.RED_ROSE) {
 
-				player.performCommand("discord bcast #749818531280977950 Plugin event triggered successfully!");
+				player.performCommand("say Action executed!");
 				ItemStack item = new ItemStack(Material.RED_ROSE, 1);
 
 				ItemMeta itemmeta = item.getItemMeta();
