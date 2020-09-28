@@ -19,7 +19,7 @@ public class PlayerListener implements Listener {
 
 		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			
-	        if (event.getClickedBlock().getType() == Material.RED_ROSE) {
+	        if (event.getClickedBlock().getType() == Material.RED_ROSE:0) {
 
 				player.performCommand("say Action executed!");
 				ItemStack item = new ItemStack(Material.RED_ROSE:0, 1);
