@@ -22,10 +22,10 @@ public class PlayerListener implements Listener {
 	        if (event.getClickedBlock().getType() == Material.RED_ROSE) {
 
 				player.performCommand("say Action executed!");
-				ItemStack item = new ItemStack(Material.RED_ROSE, 1);
+				ItemStack item = new ItemStack(Material.RED_ROSE:0, 1);
 
 				ItemMeta itemmeta = item.getItemMeta();
-				itemmeta.setDisplayName("Poppy");
+				itemmeta.setDisplayName("§cPoppy");
 
 				item.setItemMeta(itemmeta);
 				player.getInventory().addItem(new ItemStack(item));
