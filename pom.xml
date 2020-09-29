@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.cyberflame.herbs</groupId>
   <artifactId>herbs</artifactId>
-  <version>1337-SNAPSHOT-2</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>Herbs</name>
  <repositories>
     <repository>
