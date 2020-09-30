@@ -1,3 +1,4 @@
 name: ${project.name}
 main: me.cyberflame.herbs.Main
 version: ${project.version}
+website: cyberfla.me
