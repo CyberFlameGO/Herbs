@@ -1,4 +1,4 @@
-package me.cyberflame.herbs;
+package me.cyberfla.herbs;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
