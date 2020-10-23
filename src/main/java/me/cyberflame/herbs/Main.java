@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin{
 @Override
 public void onEnable() {
-	Bukkit.broadcastMessage("Herbs loaded!");
+	Bukkit.broadcastMessage("[Herbs] Plugin loaded and enabled successfully!");
 	Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
 }
 }
