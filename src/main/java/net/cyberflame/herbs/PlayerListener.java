@@ -12,31 +12,33 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PlayerListener implements Listener {
+
 	@EventHandler
 	public void onRightClick(PlayerInteractEvent event) {
 
 		Player player = event.getPlayer();
 
-		if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-			
-	        if (event.getClickedBlock().getType() == Material.RED_ROSE) {
+		if (!event.getPlayer().hasPermission("Herbs.event")) {
+			event.setCancelled(true);
+		}
+
+		if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+
+			if (event.getClickedBlock().getType() == Material.RED_ROSE) {
 
 				player.performCommand("say Action executed!");
-				ItemStack item = new ItemStack(Material.RED_ROSE, 1);
+				ItemStack flower = new ItemStack(Material.RED_ROSE, 1);
 
-				ItemMeta itemmeta = item.getItemMeta();
+				ItemMeta itemmeta = flower.getItemMeta();
 				itemmeta.setDisplayName("§cPoppy");
 
-				item.setItemMeta(itemmeta);
-				player.getInventory().addItem(new ItemStack(item));
-				
+				flower.setItemMeta(itemmeta);
+				player.getInventory().addItem(new ItemStack(flower));
+
 				event.getClickedBlock().setType(Material.AIR);
-				 Bukkit.getScheduler().scheduleSyncDelayedTask(JavaPlugin.getPlugin(Main.class), new Runnable() {
-				      public void run() {
-				        event.getClickedBlock().setType(Material.RED_ROSE);
-				      }
-				    }, 20L * 60L * 5l); //if i'm not mistaken, this is 5 minutes now, but for production, i'll set it to 5 hours
-				}
+				Bukkit.getScheduler().scheduleSyncDelayedTask(JavaPlugin.getPlugin(HerbsPlugin.class),
+						() -> event.getClickedBlock().setType(Material.RED_ROSE), 20L * 60L * 5l);
 			}
 		}
 	}
+}

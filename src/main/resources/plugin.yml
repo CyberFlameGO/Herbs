@@ -1,6 +1,8 @@
 name: ${project.name}
-main: net.cyberflame.herbs.Main
+main: net.cyberflame.herbs.HerbsPlugin
 version: ${project.version}
-description: Herbs is a plugin made for Warriors: Far From Home (https://github.com/CyberFlameGO/Herbs/)
+description: Herbs is a plugin made for Warriors Far From Home (https://github.com/CyberFlameGO/Herbs/)
 website: https://cyberfla.me/
-author: CyberFlame (Aaron)
+authors:
+  - 'CyberFlame (Aaron)'
+  - 'jcrgamer (Edited)'
